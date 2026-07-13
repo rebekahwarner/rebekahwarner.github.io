@@ -1860,3 +1860,6 @@ body { font-size: 1.125rem; }
   .section { padding-right: calc(var(--pad-x) + 8.5rem); }
   .case-footer { padding-right: calc(var(--pad-x) + 8.5rem); }
 }
+
+/* Skills lede is short and punchy: let it sit on one line on desktop */
+.section-skills .section-lede { max-width: none; }
