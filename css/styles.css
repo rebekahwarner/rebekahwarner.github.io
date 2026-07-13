@@ -1863,3 +1863,6 @@ body { font-size: 1.125rem; }
 
 /* Skills lede is short and punchy: let it sit on one line on desktop */
 .section-skills .section-lede { max-width: none; }
+
+/* A little more breathing room before the first section after the hero */
+.section-skills { padding-top: clamp(4.5rem, 9vw, 8rem); }
