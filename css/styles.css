@@ -1656,7 +1656,7 @@ body { font-size: 1.125rem; }
 }
 
 /* Reef stacks into labeled rows on small screens */
-@media (max-width: 980px) {
+@media (max-width: 620px) {
   .reef { flex-direction: column; align-items: stretch; gap: 1.6rem; padding-bottom: 0.5rem; }
   .reef-floor { display: none; }
   .coral-cluster { height: auto; display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; }
@@ -1835,7 +1835,7 @@ body { font-size: 1.125rem; }
 .node-txt { font-size: 0.68rem; }
 .polyp-label, .cluster-label { font-size: 0.74rem; }
 
-@media (max-width: 980px) {
+@media (max-width: 620px) {
   .coral-cluster { width: auto; transform: none !important; }
   .coral-cluster::after { display: none; }
 }
