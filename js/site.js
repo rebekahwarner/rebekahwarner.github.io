@@ -17,7 +17,7 @@
 const SITE = {
   email: "rebekahrwarner@protonmail.com",
   github: "https://github.com/rebekahwarner",
-  linkedin: "",  // TODO: e.g. "https://www.linkedin.com/in/yourname"
+  linkedin: "https://www.linkedin.com/in/rebekah-warner-aa492b256/",
   resume: "assets/Rebekah-Warner-Resume.pdf",  // her exact résumé file, unmodified
 };
 
