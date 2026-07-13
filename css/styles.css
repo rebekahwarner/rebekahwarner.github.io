@@ -1866,3 +1866,6 @@ body { font-size: 1.125rem; }
 
 /* A little more breathing room before the first section after the hero */
 .section-skills { padding-top: clamp(4.5rem, 9vw, 8rem); }
+
+/* Wide clusters: coral spans the full width so every node perches on it */
+.coral-wide { width: 100%; left: 0; transform: none; }
