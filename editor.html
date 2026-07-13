@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project editor · Rebekah Warner</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23E8604F'/><circle cx='38' cy='40' r='10' fill='%23F8F5EE'/></svg>">
+</head>
+<body class="editor-page">
+  <header class="editor-top">
+    <h1>Project editor</h1>
+    <p>Fill in the form, watch the live preview, and save your work as a draft in this browser. When a project is ready: <strong>Download site.js</strong> (replace <code>js/site.js</code>) and <strong>Download page</strong> (drop the file into <code>projects/</code>). That's the whole publish flow.</p>
+    <p><a href="index.html">&larr; Back to the site</a></p>
+  </header>
+
+  <main class="editor-main">
+    <section class="editor-form" aria-label="Editor form">
+      <h2>Site links</h2>
+      <label for="f-github">GitHub URL</label>
+      <input type="text" id="f-github" placeholder="https://github.com/yourname">
+      <label for="f-linkedin">LinkedIn URL</label>
+      <input type="text" id="f-linkedin" placeholder="https://www.linkedin.com/in/yourname">
+      <label for="f-resume">Resume link <span class="hint">(e.g. assets/resume.pdf; drop the PDF into assets/)</span></label>
+      <input type="text" id="f-resume" placeholder="assets/resume.pdf">
+
+      <h2>Project</h2>
+      <label for="f-picker">Editing</label>
+      <select id="f-picker"></select>
+
+      <label for="f-title">Title</label>
+      <input type="text" id="f-title" placeholder="My New Project">
+
+      <label for="f-slug">Slug <span class="hint">(filename; auto-filled from the title)</span></label>
+      <input type="text" id="f-slug" placeholder="my-new-project">
+
+      <label for="f-oneliner">One-liner <span class="hint">(the honest sentence on the card)</span></label>
+      <textarea id="f-oneliner" style="min-height:4rem"></textarea>
+
+      <div class="field-row">
+        <div>
+          <label for="f-metric-value">Headline metric</label>
+          <input type="text" id="f-metric-value" placeholder="87%">
+        </div>
+        <div>
+          <label for="f-metric-label">Metric label</label>
+          <input type="text" id="f-metric-label" placeholder="validation accuracy">
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div>
+          <label for="f-tags">Tags <span class="hint">(comma-separated)</span></label>
+          <input type="text" id="f-tags" placeholder="Python, pandas, seaborn">
+        </div>
+        <div>
+          <label for="f-wash">Card wash</label>
+          <select id="f-wash">
+            <option value="wash-teal">Teal</option>
+            <option value="wash-sand">Sand</option>
+          </select>
+        </div>
+      </div>
+
+      <h2>Case study <span class="hint" style="font-weight:400">(**bold** and `code` marks work in any text field)</span></h2>
+
+      <label for="f-problem">The problem <span class="hint">(blank line = new paragraph)</span></label>
+      <textarea id="f-problem"></textarea>
+
+      <label for="f-approach">My approach</label>
+      <textarea id="f-approach"></textarea>
+
+      <label for="f-code">Code snippet <span class="hint">(optional)</span></label>
+      <textarea id="f-code" class="code" spellcheck="false"></textarea>
+
+      <label for="f-code-after">Show the code after approach paragraph # <span class="hint">(blank = at the end)</span></label>
+      <input type="text" id="f-code-after" inputmode="numeric" placeholder="2">
+
+      <label for="f-tools">Tools</label>
+      <input type="text" id="f-tools" placeholder="Python, scikit-learn, NLTK.">
+
+      <label for="f-outcome">The outcome</label>
+      <textarea id="f-outcome"></textarea>
+
+      <h2>Chart image <span class="hint" style="font-weight:400">(optional; put the file in assets/)</span></h2>
+      <label for="f-img-file">Image filename</label>
+      <input type="text" id="f-img-file" placeholder="my-chart.png">
+      <label for="f-img-alt">Alt text <span class="hint">(describe the chart for screen readers)</span></label>
+      <input type="text" id="f-img-alt">
+      <label for="f-img-caption">Caption</label>
+      <input type="text" id="f-img-caption">
+
+      <div class="editor-actions">
+        <button type="button" class="btn" id="b-save">Save draft</button>
+        <button type="button" class="btn secondary" id="b-new">New project</button>
+        <button type="button" class="btn danger" id="b-delete">Remove project</button>
+      </div>
+      <div class="editor-actions">
+        <button type="button" class="btn" id="b-dl-site">Download site.js</button>
+        <button type="button" class="btn" id="b-dl-page">Download page</button>
+        <button type="button" class="btn secondary" id="b-export">Export JSON</button>
+        <button type="button" class="btn secondary" id="b-import">Import JSON</button>
+        <input type="file" id="f-import" accept=".json,application/json" hidden>
+      </div>
+      <p class="editor-status" id="status" aria-live="polite"></p>
+    </section>
+
+    <section class="editor-preview" aria-label="Live preview">
+      <div class="preview-tabs">
+        <button type="button" class="btn secondary" id="t-card" aria-pressed="true">Card</button>
+        <button type="button" class="btn secondary" id="t-case" aria-pressed="false">Case study</button>
+      </div>
+      <div class="preview-pane" id="preview-card"></div>
+      <div class="preview-pane" id="preview-case" hidden></div>
+    </section>
+  </main>
+
+  <script src="js/site.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/editor.js"></script>
+</body>
+</html>

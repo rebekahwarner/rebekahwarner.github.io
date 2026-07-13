@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rebekah Warner · Data Scientist</title>
+  <meta name="description" content="Rebekah Warner: Chinese linguist turned full-stack data scientist at Guidehouse. I take data from raw and messy to models and pipelines that ship. TS/SCI cleared.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rebekah Warner · Data Scientist">
+  <meta property="og:description" content="Chinese linguist turned full-stack data scientist at Guidehouse. I take data from raw and messy to models and pipelines that ship. TS/SCI cleared.">
+  <meta property="og:url" content="https://rebekahwarner.github.io/">
+  <meta property="og:image" content="https://rebekahwarner.github.io/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23175E63'/><circle cx='38' cy='40' r='10' fill='%23BCDCD2'/></svg>">
+</head>
+<body id="top">
+  <a class="skip-link" href="#skills">Skip to content</a>
+
+  <!-- Depth gauge: desktop-only section nav, built by js/main.js -->
+  <nav class="depth-gauge" aria-label="Sections" hidden>
+    <ol class="gauge-stops"></ol>
+    <p class="gauge-readout" aria-hidden="true"><span class="tele-label">depth</span><span id="gauge-depth">0</span>&hairsp;m</p>
+    <p class="gauge-tele" aria-hidden="true"><span class="tele-label">time</span><span id="dive-time">00:00</span></p>
+    <p class="gauge-tele" aria-hidden="true"><span class="tele-label">temp</span><span id="dive-temp">26°</span></p>
+  </nav>
+
+  <header class="site-header">
+    <p class="site-mark">R.W.</p>
+    <nav aria-label="Primary">
+      <a href="#skills"><span class="nav-num">01.</span> Skills</a>
+      <a href="#projects"><span class="nav-num">02.</span> Projects</a>
+      <a href="#experience"><span class="nav-num">03.</span> Experience</a>
+      <a href="#about"><span class="nav-num">04.</span> About</a>
+      <a href="#contact"><span class="nav-num">05.</span> Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ======================== HERO · 0 m ======================== -->
+    <section class="hero" aria-label="Introduction">
+      <svg class="hero-wash" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+        <defs>
+          <filter id="wc-a" x="-30%" y="-30%" width="160%" height="160%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="7" result="n"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="110"/>
+          </filter>
+          <filter id="wc-b" x="-30%" y="-30%" width="160%" height="160%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.017" numOctaves="2" seed="23" result="n"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="80"/>
+          </filter>
+          <filter id="wc-fish" x="-40%" y="-40%" width="180%" height="180%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="47" result="n"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="8"/>
+          </filter>
+          <path id="hero-fish" d="M2 16 Q20 3 40 13 Q51 5 59 4 Q54 12 54 16 Q54 20 59 28 Q51 27 40 19 Q20 29 2 16 Z"/>
+        </defs>
+        <g filter="url(#wc-a)">
+          <ellipse cx="900" cy="240" rx="380" ry="240" fill="#BCDCD2" opacity="0.55"/>
+          <ellipse cx="1050" cy="380" rx="320" ry="210" fill="#4E8F8B" opacity="0.30"/>
+          <ellipse cx="800" cy="430" rx="270" ry="160" fill="#D8C7A4" opacity="0.38"/>
+        </g>
+        <g filter="url(#wc-b)">
+          <ellipse cx="980" cy="180" rx="210" ry="150" fill="#175E63" opacity="0.20"/>
+          <ellipse cx="740" cy="250" rx="110" ry="80" fill="#E8604F" opacity="0.14"/>
+        </g>
+        <g filter="url(#wc-fish)">
+          <g class="fish"><use href="#hero-fish" transform="translate(600 520) scale(1.5)" fill="#175E63" opacity="0.28"/></g>
+          <g class="fish"><use href="#hero-fish" transform="translate(690 578) scale(1.1)" fill="#4E8F8B" opacity="0.34"/></g>
+          <g class="fish"><use href="#hero-fish" transform="translate(632 632) scale(0.9)" fill="#4E8F8B" opacity="0.26"/></g>
+        </g>
+      </svg>
+
+      <div class="hero-inner">
+        <div class="chip-row"><span class="cue-line" aria-hidden="true"></span><p class="hero-kicker"><span class="pulse-dot" aria-hidden="true"></span>Data scientist · currently at Guidehouse</p><span class="cue-line" aria-hidden="true"></span></div>
+        <h1>Rebekah Warner</h1>
+        <!-- Alternate hero lines, swap the paragraph below if you prefer:
+             1. I build machine-learning models and data pipelines for government clients. Off the clock, I'm usually underwater.
+             3. I turn messy, sensitive data into systems that hold up: models, pipelines, and databases for the public sector. -->
+        <p class="hero-line">Chinese linguist turned full-stack data scientist. I turn raw, messy data into models and pipelines that ship. TS/SCI cleared.</p>
+        <ul class="hero-links">
+          <li><a data-social="github" href="#" rel="me">GitHub</a></li>
+          <li><a data-social="linkedin" href="#" rel="me">LinkedIn</a></li>
+          <li><a href="mailto:rebekahrwarner@protonmail.com">Email</a></li>
+          <li><a data-social="resume" href="#" target="_blank" rel="noopener">Resume <span aria-hidden="true">&#8599;</span></a></li>
+        </ul>
+      </div>
+
+      <a class="dive-cue" href="#skills"><span class="cue-line" aria-hidden="true"></span>scroll to descend<span class="cue-line" aria-hidden="true"></span></a>
+    </section>
+
+    <div class="waterline" style="--above:#F8F5EE; --below:#E7F0EA" aria-hidden="true">
+      <svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false"><use href="#wl1" transform="translate(-46 0) scale(1.08 1.22)" opacity="0.38"/><path id="wl1" d="M0 0h1440v20c-78 14-141-8-222 4-99 15-168-14-258-4-100 11-172 30-262 16-91-14-160 12-250 6-90-5-151-27-241-13C124 42 60 24 0 34Z"/></svg>
+    </div>
+
+    <!-- ======================== SKILLS · −14 m ======================== -->
+    <section class="section section-skills is-deep" id="skills">
+      <!-- Jellyfish drifting at the thermocline -->
+      <svg class="jellies" viewBox="0 0 240 200" aria-hidden="true" focusable="false">
+        <defs>
+          <g id="jelly-shape">
+            <path d="M8 38 Q8 8 40 8 Q72 8 72 38 Q60 46 40 44 Q20 46 8 38 Z"/>
+            <g fill="none" stroke-linecap="round" stroke-width="3">
+              <path d="M22 46 C20 62 26 70 22 86"/>
+              <path d="M34 48 C34 66 30 78 34 96"/>
+              <path d="M48 48 C50 64 44 76 48 92"/>
+              <path d="M60 46 C62 60 56 70 60 84"/>
+            </g>
+          </g>
+          <filter id="jelly-wc" x="-40%" y="-40%" width="180%" height="180%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="2" seed="29" result="n"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="7"/>
+          </filter>
+        </defs>
+        <g filter="url(#jelly-wc)" stroke="#BCDCD2">
+          <g class="jelly"><use href="#jelly-shape" transform="translate(6 40) scale(1.15)" fill="#BCDCD2" opacity="0.2"/></g>
+          <g class="jelly"><use href="#jelly-shape" transform="translate(120 8) scale(0.85)" fill="#BCDCD2" opacity="0.15"/></g>
+          <g class="jelly"><use href="#jelly-shape" transform="translate(180 78) scale(0.6)" fill="#BCDCD2" opacity="0.12"/></g>
+        </g>
+      </svg>
+      <div class="section-inner">
+        <p class="kicker">−6&hairsp;m · the reef</p>
+        <h2>What I work with</h2>
+
+        <p class="section-lede">My whole toolkit, grown into a reef. Click any coral head for what I actually do with it.</p>
+
+        <div class="reef">
+          <svg class="reef-floor" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <defs><linearGradient id="floor-fade" x1="0" x2="1"><stop offset="0" stop-color="#6FE0CD" stop-opacity="0"/><stop offset="0.08" stop-color="#6FE0CD" stop-opacity="0.09"/><stop offset="0.92" stop-color="#6FE0CD" stop-opacity="0.09"/><stop offset="1" stop-color="#6FE0CD" stop-opacity="0"/></linearGradient><filter id="coral-wc" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="61" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="6"/></filter></defs>
+            <path filter="url(#coral-wc)" d="M0 42 C80 34 160 46 260 40 C380 32 460 48 580 42 C700 36 780 50 900 42 C1020 34 1100 46 1200 40 L1200 60 L0 60 Z" fill="url(#floor-fade)"/>
+          </svg>
+          <div class="coral-cluster" role="group" aria-label="Coding languages" data-note="Python is where I live day to day. R for statistics, SQL everywhere it counts (PostgreSQL, MySQL, SQLite, Oracle), Swift for my iOS widgets, and enough HTML, CSS, and JavaScript to build this site by hand." style="--w:4.2">
+            <svg class="coral" viewBox="0 0 200 170" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false"><g filter="url(#coral-wc)">
+<ellipse cx="100" cy="162" rx="70" ry="12" fill="#6FE0CD" fill-opacity="0.1"/>
+<g stroke="#6FE0CD" stroke-opacity="0.3" stroke-width="9" stroke-linecap="round" fill="none">
+<path d="M40 160 C38 130 44 112 40 92"/>
+<path d="M70 160 C72 124 66 104 72 78"/>
+<path d="M100 160 C98 118 104 92 100 64"/>
+<path d="M130 160 C128 128 136 108 130 84"/>
+<path d="M160 160 C162 136 156 120 160 100"/></g></g></svg>
+            <button type="button" class="node" style="--nx:8%; --ny:108px; --d:0.0s" data-name="Python"><img src="assets/icons/python.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">Python</span></button>
+            <button type="button" class="node" style="--nx:21%; --ny:60px; --d:0.9s" data-name="R"><img src="assets/icons/r.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">R</span></button>
+            <button type="button" class="node" style="--nx:34%; --ny:114px; --d:0.4s" data-name="SQL"><span class="node-txt">SQL</span><span class="sr-only">SQL</span></button>
+            <button type="button" class="node" style="--nx:47%; --ny:58px; --d:1.3s" data-name="Swift"><img src="assets/icons/swift.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">Swift</span></button>
+            <button type="button" class="node" style="--nx:60%; --ny:112px; --d:0.6s" data-name="HTML"><img src="assets/icons/html5.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">HTML</span></button>
+            <button type="button" class="node" style="--nx:74%; --ny:60px; --d:1.6s" data-name="CSS"><img src="assets/icons/css3.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">CSS</span></button>
+            <button type="button" class="node" style="--nx:89%; --ny:104px; --d:0.2s" data-name="JavaScript"><img src="assets/icons/javascript.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">JavaScript</span></button>
+            <span class="cluster-label">Coding languages</span>
+          </div>
+          <div class="coral-cluster" role="group" aria-label="Machine learning · data science" data-note="Regression (linear and logistic), random forests, SVM, k-means, KNN, and Naive Bayes, with model evaluation, all in scikit-learn. The daily stack is pandas, NumPy, SciPy, and Jupyter, with joblib when things need to run in parallel." style="--w:2.4">
+            <svg class="coral" viewBox="0 0 240 170" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false"><g filter="url(#coral-wc)" stroke="#6FE0CD" stroke-opacity="0.3" stroke-width="6" stroke-linecap="round" fill="none">
+<path d="M120 170 C118 138 122 118 116 92"/>
+<path d="M118 124 C100 106 88 96 74 88 M74 88 C62 80 54 68 50 56 M74 88 C74 72 78 62 88 52"/>
+<path d="M116 92 C130 76 140 68 154 62 M154 62 C166 56 172 46 176 34 M154 62 C150 48 152 38 160 26"/>
+<path d="M116 92 C112 70 112 56 118 40 M118 40 C110 30 106 22 104 12 M118 40 C126 32 134 28 144 26"/>
+<path d="M120 170 C104 150 92 142 76 136 M76 136 C64 132 56 124 50 114"/>
+<path d="M120 170 C138 152 148 146 164 142 M164 142 C176 138 184 130 190 120"/></g></svg>
+            <button type="button" class="node" style="--nx:18%; --ny:108px; --d:0.8s" data-name="scikit-learn"><img src="assets/icons/scikitlearn.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">scikit-learn</span></button>
+            <button type="button" class="node" style="--nx:42%; --ny:70px; --d:1.4s" data-name="pandas"><img src="assets/icons/pandas.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">pandas</span></button>
+            <button type="button" class="node" style="--nx:64%; --ny:120px; --d:0.4s" data-name="NumPy"><img src="assets/icons/numpy.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">NumPy</span></button>
+            <button type="button" class="node" style="--nx:85%; --ny:58px; --d:1.1s" data-name="Jupyter"><img src="assets/icons/jupyter.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">Jupyter</span></button>
+            <span class="cluster-label">ML · data science</span>
+          </div>
+          <div class="coral-cluster" role="group" aria-label="NLP" data-note="Text preprocessing, TF-IDF features, sentiment and text classification, and LDA topic modeling with NLTK, plus WordCloud when a corpus needs a quick look. My sentiment classifier hit 87% validation accuracy." style="--w:0.9">
+            <svg class="coral" viewBox="0 0 120 170" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false"><g filter="url(#coral-wc)" stroke="#6FE0CD" stroke-opacity="0.3" stroke-linecap="round" fill="none">
+<path stroke-width="5" d="M60 170 C54 140 66 118 58 88 C54 70 62 52 58 34"/>
+<path stroke-width="4" d="M78 170 C84 146 72 126 82 98 C88 78 80 62 84 44"/>
+<path stroke-width="4" d="M44 170 C40 152 48 140 44 124"/></g></svg>
+            <button type="button" class="node" style="--nx:50%; --ny:86px; --d:0.6s" data-name="NLTK"><span class="node-txt">NLTK</span><span class="sr-only">NLTK</span></button>
+            <span class="cluster-label">NLP</span>
+          </div>
+          <div class="coral-cluster" role="group" aria-label="GenAI" data-note="LLM APIs from OpenAI and Anthropic, prompt engineering, and agentic AI tooling, wired into real workflows through their APIs. It's how a data scientist ships an iOS app." style="--w:1.8">
+            <svg class="coral" viewBox="0 0 160 170" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false"><g filter="url(#coral-wc)">
+<ellipse cx="80" cy="158" rx="46" ry="14" fill="#6FE0CD" fill-opacity="0.12"/>
+<g stroke="#6FE0CD" stroke-opacity="0.3" stroke-width="4" stroke-linecap="round" fill="none">
+<path d="M60 150 C54 128 56 112 48 96"/><path d="M72 150 C70 124 74 108 68 88"/>
+<path d="M84 150 C86 122 82 104 88 84"/><path d="M96 150 C100 126 96 110 104 94"/>
+<path d="M108 150 C112 132 108 118 116 104"/></g></g></svg>
+            <button type="button" class="node" style="--nx:24%; --ny:92px; --d:0.2s" data-name="OpenAI"><img src="assets/icons/openai.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">OpenAI</span></button>
+            <button type="button" class="node" style="--nx:52%; --ny:62px; --d:1.0s" data-name="Anthropic"><img src="assets/icons/anthropic.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">Anthropic</span></button>
+            <button type="button" class="node" style="--nx:80%; --ny:96px; --d:0.7s" data-name="APIs"><span class="node-txt">API</span><span class="sr-only">APIs</span></button>
+            <span class="cluster-label">GenAI</span>
+          </div>
+          <div class="coral-cluster" role="group" aria-label="Databases · SQL" data-note="PostgreSQL, MySQL, SQLite, and Oracle, from schema design through query tuning and indexing, with SQLAlchemy, psycopg2, and pyodbc on the Python side. High-volume ad-hoc SQL and schema-drift monitoring are my day job." style="--w:2.3">
+            <svg class="coral" viewBox="0 0 180 170" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false"><g filter="url(#coral-wc)">
+<path d="M20 170 C20 130 50 104 90 104 C130 104 160 130 160 170 Z" fill="#6FE0CD" fill-opacity="0.1" stroke="#6FE0CD" stroke-opacity="0.25" stroke-width="2"/>
+<g stroke="#6FE0CD" stroke-opacity="0.3" stroke-width="3" stroke-linecap="round" fill="none">
+<path d="M40 150 Q52 140 64 150 T88 150 T112 150 T136 150"/>
+<path d="M48 132 Q60 122 72 132 T96 132 T120 132"/>
+<path d="M64 116 Q76 108 88 116 T112 116"/></g></g></svg>
+            <button type="button" class="node" style="--nx:16%; --ny:78px; --d:0.5s" data-name="PostgreSQL"><img src="assets/icons/postgresql.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">PostgreSQL</span></button>
+            <button type="button" class="node" style="--nx:40%; --ny:106px; --d:1.3s" data-name="MySQL"><img src="assets/icons/mysql.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">MySQL</span></button>
+            <button type="button" class="node" style="--nx:62%; --ny:62px; --d:0.9s" data-name="SQLite"><img src="assets/icons/sqlite.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">SQLite</span></button>
+            <button type="button" class="node" style="--nx:85%; --ny:94px; --d:1.1s" data-name="Oracle"><img src="assets/icons/oracle.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">Oracle</span></button>
+            <span class="cluster-label">Databases</span>
+          </div>
+          <div class="coral-cluster" role="group" aria-label="Data engineering · cloud" data-note="ETL and data cleaning with pandas and regex, BeautifulSoup and Requests for ingest, and openpyxl for Excel reporting, plus AWS, Docker, and Git. Built to survive locked-down government environments." style="--w:2.2">
+            <svg class="coral" viewBox="0 0 170 170" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false"><g filter="url(#coral-wc)" stroke="#6FE0CD" stroke-opacity="0.25" stroke-width="12" stroke-linecap="round" fill="none">
+<path d="M45 170 L45 108"/><path d="M75 170 L75 88"/><path d="M105 170 L105 118"/><path d="M135 170 L135 98"/></g></svg>
+            <button type="button" class="node" style="--nx:26%; --ny:96px; --d:0.3s" data-name="Docker"><img src="assets/icons/docker.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">Docker</span></button>
+            <button type="button" class="node" style="--nx:52%; --ny:64px; --d:1.2s" data-name="Git"><img src="assets/icons/git.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">Git</span></button>
+            <button type="button" class="node" style="--nx:79%; --ny:88px; --d:0.7s" data-name="AWS"><img src="assets/icons/amazonwebservices.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">AWS</span></button>
+            <span class="cluster-label">Data engineering</span>
+          </div>
+          <div class="coral-cluster" role="group" aria-label="Visualization and BI" data-note="Tableau and Power BI on the BI side; Matplotlib, Seaborn, and Plotly in code. Dashboards for leadership and executive briefings for clients." style="--w:2.0">
+            <svg class="coral" viewBox="0 0 180 170" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false"><g filter="url(#coral-wc)" stroke="#6FE0CD" stroke-linecap="round" fill="none">
+<g stroke-opacity="0.3" stroke-width="4">
+<path d="M90 168 C50 130 34 92 28 48"/><path d="M90 168 C68 122 60 84 58 42"/>
+<path d="M90 168 C90 116 90 74 90 34"/><path d="M90 168 C112 122 120 84 122 42"/>
+<path d="M90 168 C130 130 146 92 152 48"/></g>
+<g stroke-opacity="0.2" stroke-width="2">
+<path d="M40 96 C60 84 120 84 140 96"/><path d="M52 64 C70 54 110 54 128 64"/></g></g></svg>
+            <button type="button" class="node" style="--nx:26%; --ny:84px; --d:0.6s" data-name="Tableau"><img src="assets/icons/tableau.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">Tableau</span></button>
+            <button type="button" class="node" style="--nx:52%; --ny:112px; --d:1.5s" data-name="Power BI"><img src="assets/icons/powerbi.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">Power BI</span></button>
+            <button type="button" class="node" style="--nx:79%; --ny:62px; --d:0.1s" data-name="Plotly"><img src="assets/icons/plotly.svg" alt="" width="20" height="20" loading="lazy"><span class="sr-only">Plotly</span></button>
+            <span class="cluster-label">Viz · BI</span>
+          </div>
+          <div class="coral-cluster" role="group" aria-label="Chinese, professional proficiency" data-note="Professional proficiency in speaking, reading, and writing. Three years as a DoD language analyst, with hundreds of translations informing 100+ intelligence reports." style="--w:0.9">
+            <svg class="coral" viewBox="0 0 120 170" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false"><g filter="url(#coral-wc)">
+<ellipse cx="60" cy="162" rx="34" ry="12" fill="#6FE0CD" fill-opacity="0.12"/>
+<path d="M60 156 C54 128 66 108 58 80 C54 64 60 48 56 32" stroke="#6FE0CD" stroke-opacity="0.3" stroke-width="5" stroke-linecap="round" fill="none"/></g></svg>
+            <button type="button" class="node" style="--nx:50%; --ny:92px; --d:0.8s" data-name="Chinese"><span class="node-txt">中文</span><span class="sr-only">Chinese</span></button>
+            <span class="cluster-label">中文 · Chinese</span>
+          </div>
+        </div>
+
+        <p class="reef-note" id="reef-note" aria-live="polite"><span class="rn-name">Reef log</span><span class="rn-text">Hover an inhabitant for its name; click a coral head for what I actually do with it.</span></p>
+
+        <p class="clearance">Active TS/SCI clearance with full-scope polygraph.</p>
+      </div>
+    </section>
+
+    <div class="waterline" style="--above:#326866; --below:#1D5A5F" aria-hidden="true">
+      <svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false"><use href="#wl4" transform="translate(-58 0) scale(1.09 1.2)" opacity="0.38"/><path id="wl4" d="M0 0h1440v22c-84 13-150-10-235 2-97 14-166-15-256-5-98 11-165 31-255 18-90-13-162 9-252 4-90-5-152-26-242-13-80 12-140-6-200 5Z"/></svg>
+    </div>
+
+    <!-- ======================== PROJECTS · −22 m ======================== -->
+    <section class="section section-projects" id="projects">
+      <!-- A sea turtle passing through the shallows -->
+      <svg class="sea-turtle" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+        <defs>
+          <filter id="turtle-wc" x="-40%" y="-40%" width="180%" height="180%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="19" result="n"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="8"/>
+          </filter>
+        </defs>
+        <g class="turtle-fig" filter="url(#turtle-wc)" fill="#4E8F8B" opacity="0.4">
+          <ellipse cx="60" cy="62" rx="26" ry="32"/>
+          <ellipse cx="60" cy="21" rx="9" ry="11"/>
+          <path d="M38 48 Q18 36 9 45 Q21 58 37 58 Z"/>
+          <path d="M82 48 Q102 36 111 45 Q99 58 83 58 Z"/>
+          <path d="M43 90 Q31 102 35 109 Q47 104 51 94 Z"/>
+          <path d="M77 90 Q89 102 85 109 Q73 104 69 94 Z"/>
+          <path d="M57 93 L60 105 L63 93 Z"/>
+        </g>
+      </svg>
+      <div class="section-inner">
+        <p class="kicker">−14&hairsp;m · the thermocline</p>
+        <h2>Projects</h2>
+        <p class="section-lede">Case studies, not bullet points. The problem, what I did, and what it was worth.</p>
+
+        <div class="project-grid" id="project-grid">
+          <noscript>
+            <ul>
+              <li><a href="projects/nlp-sentiment-classifier.html">NLP Sentiment Text Classifier</a></li>
+              <li><a href="projects/linkedin-job-market.html">LinkedIn IT Job-Market Analysis</a></li>
+              <li><a href="projects/schema-drift-monitor.html">Schema-Drift Monitor &amp; Environment Automation</a></li>
+              <li><a href="projects/joshua-project-widget.html">Joshua Project iOS Widgets</a></li>
+            </ul>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <div class="waterline" style="--above:#E7F0EA; --below:#C9E0D8" aria-hidden="true">
+      <svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false"><use href="#wl2" transform="translate(-52 0) scale(1.08 1.2)" opacity="0.38"/><path id="wl2" d="M0 0h1440v24c-90 12-155-14-240-2-95 13-170-16-255-6-95 11-160 34-250 22-90-12-165 8-255 2-90-6-150-24-240-12-80 11-140-5-200 6Z"/></svg>
+    </div>
+
+    <!-- ======================== EXPERIENCE · −6 m ======================== -->
+    <section class="section section-experience" id="experience">
+      <!-- A small school passing through "the reef", same watercolor treatment as the hero wash -->
+      <svg class="reef-fish" viewBox="0 0 420 340" aria-hidden="true" focusable="false">
+        <defs>
+          <path id="fish-shape" d="M2 16 Q20 3 40 13 Q51 5 59 4 Q54 12 54 16 Q54 20 59 28 Q51 27 40 19 Q20 29 2 16 Z"/>
+          <filter id="fish-wc" x="-40%" y="-40%" width="180%" height="180%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="2" seed="11" result="n"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="9"/>
+          </filter>
+        </defs>
+        <g filter="url(#fish-wc)">
+          <g class="fish"><use href="#fish-shape" transform="translate(30 40) scale(1.7)" fill="#4E8F8B" opacity="0.5"/></g>
+          <g class="fish"><use href="#fish-shape" transform="translate(180 15) scale(1.15)" fill="#175E63" opacity="0.35"/></g>
+          <g class="fish"><use href="#fish-shape" transform="translate(260 80) scale(1.45)" fill="#4E8F8B" opacity="0.42"/></g>
+          <g class="fish"><use href="#fish-shape" transform="translate(80 150) scale(1.0)" fill="#175E63" opacity="0.3"/></g>
+          <g class="fish"><use href="#fish-shape" transform="translate(250 180) scale(0.8)" fill="#E8604F" opacity="0.5"/></g>
+          <g class="fish"><use href="#fish-shape" transform="translate(330 130) scale(1.2)" fill="#D8C7A4" opacity="0.75"/></g>
+          <g class="fish"><use href="#fish-shape" transform="translate(150 250) scale(1.5)" fill="#175E63" opacity="0.25"/></g>
+        </g>
+      </svg>
+      <div class="section-inner">
+        <p class="kicker">−22&hairsp;m · open water</p>
+        <h2>Experience</h2>
+
+        <ol class="timeline">
+          <li>
+            <h3>Data Scientist · Guidehouse</h3>
+            <p class="dates">August 2025 – present</p>
+            <ul>
+              <li>Design database architecture for analytics work, and handle a high volume of ad-hoc SQL for clients.</li>
+              <li>Built an automated schema-drift monitor (JSON baseline snapshots, live diffs, Excel reporting) that turned reactive failures into proactive detection.</li>
+              <li>Cut per-person environment setup from about three days to fifteen minutes with batch automation and a test suite.</li>
+              <li>Piloted an AWS migration inside a locked-down, non-admin environment.</li>
+              <li>The consulting half: mentoring newer analysts, fielding stakeholder questions in plain English, and turning technical findings into executive briefings that clients act on.</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Data Science Intern · Red Alpha</h3>
+            <p class="dates">Summer 2024</p>
+            <ul>
+              <li>Built and deployed a production capacity-planning app (Python, PostgreSQL, Streamlit) that saved clients hundreds of hours.</li>
+              <li>Powered leadership dashboards with PostgreSQL, and sped things up with query optimization and indexing.</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Language Analyst · U.S. Department of Defense</h3>
+            <p class="dates">2020 – 2023</p>
+            <ul>
+              <li>Chinese-language analysis and translation informing 100+ intelligence reports for senior officials.</li>
+              <li>Built Jupyter workflows to consolidate large datasets, the work that pulled me into data science.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="waterline" style="--above:#C9E0D8; --below:#326866" aria-hidden="true">
+      <svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false"><use href="#wl3" transform="translate(-44 0) scale(1.07 1.24)" opacity="0.38"/><path id="wl3" d="M0 0h1440v18c-70 16-148-6-230 8-98 16-162-18-252-6-100 13-178 32-268 16-90-16-158 10-248 8-90-2-155-29-245-15-85 13-137-9-197 5Z"/></svg>
+    </div>
+
+    <!-- ======================== ABOUT · −30 m ======================== -->
+    <section class="section section-about is-deep" id="about">
+      <!-- A diver in open water. That's her -->
+      <svg class="diver" viewBox="0 0 160 110" aria-hidden="true" focusable="false">
+        <defs>
+          <filter id="diver-wc" x="-40%" y="-40%" width="180%" height="180%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="37" result="n"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="7"/>
+          </filter>
+        </defs>
+        <g class="diver-fig" filter="url(#diver-wc)" opacity="0.27">
+          <g fill="none" stroke="#BCDCD2" stroke-width="2">
+            <circle cx="12" cy="48" r="2.5"/>
+            <circle cx="6" cy="38" r="3.5"/>
+            <circle cx="15" cy="28" r="2.5"/>
+          </g>
+          <g fill="#BCDCD2">
+            <circle cx="20" cy="64" r="7"/>
+            <rect x="32" y="48" width="24" height="8" rx="4"/>
+            <path d="M26 58 Q46 52 62 57 L66 70 Q46 73 28 70 Z"/>
+            <path d="M62 57 L98 60 L100 68 L66 70 Z"/>
+            <path d="M98 60 L126 50 L120 62 L128 70 L100 68 Z"/>
+            <path d="M36 70 Q40 82 52 84 Q54 78 48 74 Z"/>
+          </g>
+        </g>
+      </svg>
+      <!-- A manta passing below, every diver's favorite encounter -->
+      <svg class="manta" viewBox="0 0 240 130" aria-hidden="true" focusable="false">
+        <defs>
+          <filter id="manta-wc" x="-30%" y="-30%" width="160%" height="160%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="53" result="n"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="8"/>
+          </filter>
+        </defs>
+        <g class="manta-fig" filter="url(#manta-wc)" fill="#BCDCD2" opacity="0.14">
+          <path d="M120 22 C78 24 40 48 10 76 C48 86 86 90 120 98 C154 90 192 86 230 76 C200 48 162 24 120 22 Z"/>
+          <path d="M106 24 L100 8 L112 16 Z"/>
+          <path d="M134 24 L140 8 L128 16 Z"/>
+          <path d="M120 98 L115 127 L122 124 Z"/>
+        </g>
+      </svg>
+      <div class="section-inner">
+        <p class="kicker">−30&hairsp;m · the midnight zone</p>
+        <h2>About</h2>
+        <div class="about-grid">
+          <div class="about-story">
+            <div class="about-beat">
+              <p class="cs-label">The path</p>
+              <p>I've been studying Chinese since middle school, and it carried me all the way to the Department of Defense, where I spent three years as a linguist. I loved the work. The problem: there was always more data than any human could read.</p>
+            </div>
+            <div class="about-beat">
+              <p class="cs-label">The desk next door</p>
+              <p class="about-pull">Then I just so happened to sit next to a data scientist. I asked what that was. <em>Oh. That's the answer.</em></p>
+            </div>
+            <div class="about-beat">
+              <p class="cs-label">The switch</p>
+              <p>So I went back to Maryland, switched my major to Social Data Science, and became one. Turns out I was a STEM person the whole time.</p>
+            </div>
+            <div class="about-beat">
+              <p class="cs-label">Outside of work</p>
+              <p>I'm happiest near the ocean; nannying in Hawaii did that to me. My scuba certification is in progress, and this page's descent is the one I'm training for.</p>
+            </div>
+          </div>
+
+          <div class="about-notes">
+          <div class="about-note">
+            <h3>How I work</h3>
+            <p>I think of my skills like tools on a belt. The newest, flashiest technology isn't always the right one; you don't reach for pliers when you need a screwdriver. So I start with the people and the problem: what does the client actually need, and what is the data actually telling me.</p>
+          </div>
+          <div class="about-note">
+            <h3>The translator thread</h3>
+            <p>Consulting has sharpened the skill I've always leaned on: translation. I spent years turning Chinese into English for intelligence reports, and now I spend my days turning technical work into plain English for clients and executives.</p>
+          </div>
+          <div class="about-note">
+            <h3>Off the clock</h3>
+            <p>I build things just because they should exist, like the iOS widgets up in my projects. Agentic AI has made building outside your lane more accessible, and I use it happily.</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="waterline" style="--above:#1D5A5F; --below:#0C2B2F" aria-hidden="true">
+      <svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false"><use href="#wl5" transform="translate(-48 0) scale(1.08 1.22)" opacity="0.38"/><path id="wl5" d="M0 0h1440v20c-76 15-144-8-228 4-98 14-170-14-260-4-98 11-170 28-260 15-90-13-158 11-248 7-90-4-152-27-244-14-78 12-140-7-200 4Z"/></svg>
+    </div>
+
+    <!-- ======================== CONTACT · −40 m ======================== -->
+    <footer class="section section-contact is-deep" id="contact">
+      <!-- The seafloor: kelp, a coral branch, and two fish at −40 m -->
+      <svg class="seafloor" viewBox="0 0 1440 200" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+        <defs>
+          <filter id="reef-wc" x="-20%" y="-20%" width="140%" height="140%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="8"/>
+          </filter>
+        </defs>
+        <g filter="url(#reef-wc)" fill="none" stroke-linecap="round">
+          <ellipse cx="240" cy="206" rx="150" ry="20" fill="#BCDCD2" opacity="0.05"/>
+          <ellipse cx="1180" cy="208" rx="180" ry="22" fill="#D8C7A4" opacity="0.05"/>
+          <g class="kelp"><path d="M96 200 C90 158 108 132 98 92 C94 74 104 52 100 34" stroke="#4E8F8B" stroke-width="9" opacity="0.16"/></g>
+          <g class="kelp"><path d="M128 200 C134 168 118 140 130 104 C136 84 126 64 132 44" stroke="#BCDCD2" stroke-width="8" opacity="0.13"/></g>
+          <g class="kelp"><path d="M160 200 C154 172 168 150 158 118 C154 100 164 84 160 66" stroke="#D8C7A4" stroke-width="7" opacity="0.14"/></g>
+          <g class="kelp"><path d="M512 200 C508 180 514 166 510 150 M524 200 C528 178 520 168 526 148 M536 200 C534 184 540 172 536 156" stroke="#BCDCD2" stroke-width="5" opacity="0.11"/></g>
+          <path d="M980 200 L980 140 M980 168 L956 120 M980 158 L1006 118 M956 120 L944 96 M956 120 L968 100 M1006 118 L1018 96 M1006 118 L996 94" stroke="#E8604F" stroke-width="6" opacity="0.13"/>
+          <g class="kelp"><path d="M1272 200 C1266 162 1284 138 1274 100 C1270 82 1280 62 1276 42" stroke="#4E8F8B" stroke-width="9" opacity="0.14"/></g>
+          <g class="kelp"><path d="M1304 200 C1310 172 1294 146 1306 112" stroke="#BCDCD2" stroke-width="7" opacity="0.11"/></g>
+          <g class="kelp"><path d="M1338 200 C1332 176 1346 156 1338 128 C1334 112 1342 98 1338 82" stroke="#D8C7A4" stroke-width="8" opacity="0.13"/></g>
+          <g class="fish"><use href="#fish-shape" transform="translate(680 110) scale(1.15)" fill="#BCDCD2" opacity="0.13"/></g>
+          <g class="fish"><use href="#fish-shape" transform="translate(745 85) scale(0.8)" fill="#BCDCD2" opacity="0.10"/></g>
+        </g>
+      </svg>
+      <div class="section-inner section-narrow">
+        <p class="kicker">−40&hairsp;m · the seafloor</p>
+        <p class="contact-line">You made it to the bottom. The fastest way up to me is email; I'm always glad to talk data, public sector problems, or dive sites.</p>
+        <p class="contact-email"><a href="mailto:rebekahrwarner@protonmail.com">rebekahrwarner@protonmail.com</a></p>
+        <ul class="footer-links">
+          <li><a data-social="github" href="#" rel="me">GitHub</a></li>
+          <li><a data-social="linkedin" href="#" rel="me">LinkedIn</a></li>
+        </ul>
+        <p class="colophon">Built by hand with HTML, CSS, and a little watercolor. © <span id="year">2026</span> Rebekah Warner.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/site.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/water.js"></script>
+  <script src="js/snow.js"></script>
+  <script src="js/scenes.js"></script>
+</body>
+</html>
