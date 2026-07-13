@@ -1869,3 +1869,32 @@ body { font-size: 1.125rem; }
 
 /* Wide clusters: coral spans the full width so every node perches on it */
 .coral-wide { width: 100%; left: 0; transform: none; }
+
+/* ============================================================
+   Reef stays ONE continuous bed at every width: the stage clips,
+   and js/main.js scales the reef to fit instead of letting it wrap.
+   ============================================================ */
+.reef-stage { overflow: hidden; }
+@media (min-width: 981px) {
+  .reef { flex-wrap: nowrap; width: max-content; transform-origin: left top; }
+}
+
+/* ============================================================
+   Reef wraps into tidy centered tiers (no scatter, aligned
+   baselines) so it never looks broken at any width. Overrides
+   the earlier one-row/scale attempt.
+   ============================================================ */
+.reef-stage { overflow: visible; }
+.reef {
+  flex-wrap: wrap;
+  width: auto;
+  transform: none !important;
+  justify-content: center;
+  align-items: flex-end;
+  column-gap: clamp(0.6rem, 2.2vw, 1.8rem);
+  row-gap: 5.5rem;
+}
+@media (min-width: 981px) {
+  .reef { flex-wrap: wrap; width: auto; }   /* undo the earlier nowrap rule */
+}
+.coral-cluster { transform: none !important; }   /* kill the scatter offsets */
