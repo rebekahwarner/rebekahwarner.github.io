@@ -1898,3 +1898,63 @@ body { font-size: 1.125rem; }
   .reef { flex-wrap: wrap; width: auto; }   /* undo the earlier nowrap rule */
 }
 .coral-cluster { transform: none !important; }   /* kill the scatter offsets */
+
+/* ============================================================
+   MOBILE PASS — phone & small-screen fixes. Appended last so it
+   wins the cascade over every earlier round.
+   ============================================================ */
+
+/* Case studies never push wider than the card: grid items refuse to
+   shrink below their code snippet's widest line unless told otherwise. */
+.cs-main, .cs-side, .card-case-inner, .case-pad { min-width: 0; }
+.cs-main pre { max-width: 100%; }
+
+@media (max-width: 720px) {
+  /* The base file's rule targeted .card-link, a class that no longer
+     exists; and the unscoped HUD block re-flexed .dive-cue after the
+     old display:none. Both re-fixed here. */
+  .dive-cue { display: none; }
+
+  /* Project rows stack: ghost number + metric as a compact banner row,
+     body below, instead of a 150px column squeezing the text. */
+  .card-head { grid-template-columns: 1fr; }
+  .card-wash {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem 0;
+  }
+  .card-wash::before { font-size: 1.9rem; }
+  .card-body { padding-top: 0.9rem; }
+  .case-pad { margin: 0 0 1.25rem; }
+
+  /* Timeline ghost numbers shrink with their thinner gutter */
+  .timeline > li::before { font-size: 1.6rem; top: 2.4rem; }
+}
+
+/* Reef on phones: the late "tidy tiers" block leaks row-gap 5.5rem and
+   align-items flex-end into the stacked layout. Restore the intended
+   labeled chip rows. */
+@media (max-width: 620px) {
+  .reef {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    row-gap: 1.4rem;
+    column-gap: 0;
+  }
+  .coral-cluster {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  .coral, .reef-floor { display: none; }
+  .coral-cluster .node {
+    position: static;
+    transform: none;
+    animation: none;
+  }
+  .cluster-label { position: static; transform: none; order: -1; width: 100%; }
+}
