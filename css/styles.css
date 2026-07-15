@@ -1932,29 +1932,71 @@ body { font-size: 1.125rem; }
   .timeline > li::before { font-size: 1.6rem; top: 2.4rem; }
 }
 
-/* Reef on phones: the late "tidy tiers" block leaks row-gap 5.5rem and
-   align-items flex-end into the stacked layout. Restore the intended
-   labeled chip rows. */
+/* Reef on phones: keep the coral. Clusters stack as full-width
+   mini-reefs, slightly shrunk, each with its coral, glowing nodes,
+   and label — the same reef, one formation at a time. The late
+   tidy-tiers block leaks row-gap 5.5rem and align-items flex-end
+   into this layout, so everything is re-asserted here. */
 @media (max-width: 620px) {
   .reef {
     flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    row-gap: 1.4rem;
-    column-gap: 0;
-  }
-  .coral-cluster {
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
     align-items: center;
+    justify-content: flex-start;
+    row-gap: 3.2rem;
+    column-gap: 0;
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
   }
-  .coral, .reef-floor { display: none; }
+  .reef-floor { display: none; }
+  .coral-cluster {
+    flex: none;
+    display: block;
+    position: relative;
+    width: min(100%, 400px);
+    height: 168px;
+  }
+  .coral {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 92%;
+    max-width: 100%;
+  }
+  .coral-wide { width: 100%; left: 0; transform: none; }
+  /* Nodes shrink a little; --ny values were tuned for 195px-tall
+     clusters, so scale their altitude down to match 168px. */
   .coral-cluster .node {
-    position: static;
-    transform: none;
-    animation: none;
+    position: absolute;
+    left: var(--nx);
+    bottom: calc(var(--ny) * 0.82);
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
   }
-  .cluster-label { position: static; transform: none; order: -1; width: 100%; }
+  .cluster-label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -2rem;
+    width: auto;
+    order: 0;
+  }
+  /* The reef log rides along: main.js moves it under the tapped
+     cluster, and it stacks (name over note) instead of the desktop
+     side-by-side row. */
+  .reef .reef-note { position: static; width: 100%; margin: 0.4rem 0 0; }
+  .reef-note { flex-direction: column; gap: 0.35rem; min-height: 0; }
+  .rn-name { white-space: normal; }
+}
+}
+
+/* Seafloor on phones: the full 1440px scene was center-cropped into a
+   90px strip, leaving only faint wisps. Taller, brighter, and cropped
+   toward the kelp forest (main.js flips the crop anchor). */
+@media (max-width: 720px) {
+  .seafloor { height: clamp(150px, 44vw, 200px); }
+  .seafloor path, .seafloor ellipse { opacity: 0.3; }
+  .section-contact { padding-bottom: clamp(12rem, 52vw, 15rem); }
 }

@@ -257,12 +257,20 @@
   if (reefEl && noteEl) {
     const nameEl = noteEl.querySelector(".rn-name");
     const textEl = noteEl.querySelector(".rn-text");
+    const phone = window.matchMedia("(max-width: 620px)");
+    // No hover on touch screens; the prompt should say what works there.
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      textEl.textContent = "Tap a coral head for what I actually do with it.";
+    }
     reefEl.addEventListener("click", (e) => {
       const cluster = e.target.closest(".coral-cluster");
       if (!cluster) return;
       nameEl.textContent = cluster.getAttribute("aria-label") || "";
       textEl.textContent = cluster.dataset.note || "";
       noteEl.classList.add("rn-active");
+      // On phones the log lives below the whole stack, out of sight;
+      // bring the note to the coral that was tapped instead.
+      if (phone.matches) cluster.insertAdjacentElement("afterend", noteEl);
     });
   }
 
@@ -273,6 +281,14 @@
     new IntersectionObserver((entries) => {
       gaugeEl.classList.toggle("gauge-hidden", entries[0].isIntersecting);
     }, { threshold: 0.2 }).observe(heroSection);
+  }
+
+  /* ---------- Seafloor: on phones, crop to the kelp forest ---------- */
+  // The scene is authored 1440 wide; a centered crop on a narrow screen
+  // lands on its sparsest stretch. Anchor left, where the kelp lives.
+  const seafloor = document.querySelector(".seafloor");
+  if (seafloor && window.matchMedia("(max-width: 720px)").matches) {
+    seafloor.setAttribute("preserveAspectRatio", "xMinYMax slice");
   }
 
   /* ---------- Footer year ---------- */
