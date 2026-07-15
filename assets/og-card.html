@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OG card source — screenshot me at 1200×630</title>
+<!-- Regenerate the preview image from the repo root with:
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless \
+    --window-size=1200,630 --hide-scrollbars --virtual-time-budget=4000 \
+    --screenshot=assets/og-image.png assets/og-card.html
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --glow: #6FE0CD;
+    --glow-soft: rgba(111, 224, 205, 0.55);
+    --text-hi: #EFF7F4;
+    --text-lo: #D5E2DE;
+    --coral: #E8604F;
+  }
+  * { margin: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    position: relative;
+    background:
+      radial-gradient(130% 100% at 50% -10%, #0E2B38 0%, #081C27 45%, #05131C 100%),
+      #04101A;
+    font-family: "Source Sans 3", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* HUD corner ticks, same as the site's scenes */
+  .tick { position: absolute; width: 34px; height: 34px; }
+  .tick.tl { top: 36px; left: 40px; border-top: 2px solid rgba(111,224,205,0.35); border-left: 2px solid rgba(111,224,205,0.35); }
+  .tick.br { bottom: 36px; right: 40px; border-bottom: 2px solid rgba(111,224,205,0.35); border-right: 2px solid rgba(111,224,205,0.35); }
+
+  .inner { position: relative; text-align: center; z-index: 2; margin-top: -36px; }
+
+  .chip-row { display: flex; align-items: center; justify-content: center; gap: 22px; margin-bottom: 34px; }
+  .cue-line { width: 150px; height: 1px; background: linear-gradient(90deg, transparent, var(--glow-soft)); }
+  .cue-line:last-child { background: linear-gradient(90deg, var(--glow-soft), transparent); }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 21px;
+    letter-spacing: 0.18em;
+    color: var(--glow);
+    border: 1px solid rgba(111, 224, 205, 0.28);
+    background: rgba(111, 224, 205, 0.06);
+    border-radius: 999px;
+    padding: 12px 30px;
+  }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--glow); box-shadow: 0 0 10px var(--glow); }
+
+  h1 {
+    font-family: "Chakra Petch", monospace;
+    font-weight: 600;
+    font-size: 104px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-hi);
+    text-shadow: 0 0 18px rgba(111, 224, 205, 0.45), 0 0 70px rgba(111, 224, 205, 0.2);
+    margin: 0 0 26px;
+    white-space: nowrap;
+  }
+
+  .line {
+    font-size: 31px;
+    color: var(--text-lo);
+    margin-bottom: 40px;
+  }
+
+  .tele {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 20px;
+    letter-spacing: 0.22em;
+    color: rgba(111, 224, 205, 0.75);
+    text-transform: uppercase;
+  }
+  .tele .coral-txt { color: var(--coral); }
+
+  svg.reefline { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; z-index: 1; }
+</style>
+</head>
+<body>
+  <div class="tick tl"></div>
+  <div class="tick br"></div>
+
+  <!-- Marine snow -->
+  <svg width="1200" height="630" style="position:absolute;inset:0" aria-hidden="true">
+    <g fill="#D5E2DE">
+      <circle cx="104" cy="88" r="2.2" opacity="0.16"/><circle cx="273" cy="215" r="1.6" opacity="0.12"/>
+      <circle cx="87" cy="410" r="2.6" opacity="0.14"/><circle cx="207" cy="522" r="1.8" opacity="0.11"/>
+      <circle cx="336" cy="66" r="1.5" opacity="0.13"/><circle cx="404" cy="470" r="2.3" opacity="0.12"/>
+      <circle cx="560" cy="90" r="1.7" opacity="0.10"/><circle cx="702" cy="60" r="2.4" opacity="0.15"/>
+      <circle cx="836" cy="132" r="1.6" opacity="0.12"/><circle cx="948" cy="84" r="2.1" opacity="0.16"/>
+      <circle cx="1078" cy="182" r="1.8" opacity="0.13"/><circle cx="1128" cy="332" r="2.5" opacity="0.14"/>
+      <circle cx="998" cy="452" r="1.7" opacity="0.11"/><circle cx="1096" cy="540" r="2.2" opacity="0.13"/>
+      <circle cx="640" cy="560" r="1.5" opacity="0.10"/><circle cx="484" cy="180" r="1.4" opacity="0.09"/>
+    </g>
+    <g fill="#6FE0CD">
+      <circle cx="176" cy="300" r="1.8" opacity="0.14"/><circle cx="356" cy="330" r="1.4" opacity="0.11"/>
+      <circle cx="762" cy="200" r="1.9" opacity="0.13"/><circle cx="906" cy="356" r="1.5" opacity="0.11"/>
+      <circle cx="1042" cy="86" r="1.4" opacity="0.12"/><circle cx="66" cy="220" r="1.6" opacity="0.12"/>
+      <circle cx="524" cy="530" r="1.8" opacity="0.12"/><circle cx="884" cy="530" r="1.6" opacity="0.10"/>
+    </g>
+  </svg>
+
+  <!-- The reef along the bottom, kelp and glowing nodes -->
+  <svg class="reefline" viewBox="0 0 1200 150" aria-hidden="true">
+    <defs>
+      <filter id="wc" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="7"/>
+      </filter>
+      <radialGradient id="bed" cx="0.5" cy="1">
+        <stop offset="0" stop-color="#6FE0CD" stop-opacity="0.10"/>
+        <stop offset="1" stop-color="#6FE0CD" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <ellipse cx="600" cy="158" rx="560" ry="34" fill="url(#bed)"/>
+    <g filter="url(#wc)" fill="none" stroke-linecap="round" stroke="#6FE0CD">
+      <path d="M96 150 C90 108 108 82 98 42 C94 24 104 8 100 -6" stroke-width="8" opacity="0.30"/>
+      <path d="M128 150 C134 118 118 92 130 56 C136 36 126 20 132 4" stroke-width="7" opacity="0.24"/>
+      <path d="M160 150 C154 122 168 100 158 68 C154 50 164 36 160 20" stroke-width="6" opacity="0.26"/>
+      <path d="M512 150 C508 130 514 116 510 100 M524 150 C528 128 520 118 526 98 M536 150 C534 134 540 122 536 106" stroke-width="5" opacity="0.22"/>
+      <path d="M980 150 L980 90 M980 118 L956 70 M980 108 L1006 68 M956 70 L944 46 M956 70 L968 50 M1006 68 L1018 46 M1006 68 L996 44" stroke-width="6" opacity="0.28" stroke="#E8604F"/>
+      <path d="M1272 150 C1266 112 1284 88 1274 50" stroke-width="8" opacity="0.26" transform="translate(-180 0)"/>
+      <path d="M1338 150 C1332 126 1346 106 1338 78 C1334 62 1342 48 1338 32" stroke-width="7" opacity="0.28" transform="translate(-180 0)"/>
+      <path d="M330 150 C326 128 334 112 330 94 C328 80 334 68 330 54" stroke-width="6" opacity="0.22"/>
+      <path d="M760 150 C756 132 764 118 760 102" stroke-width="6" opacity="0.20"/>
+    </g>
+    <!-- glowing polyps -->
+    <g>
+      <circle cx="100" cy="16" r="7" fill="#06141D" stroke="#6FE0CD" stroke-opacity="0.7" stroke-width="1.6"/>
+      <circle cx="100" cy="16" r="12" fill="none" stroke="#6FE0CD" stroke-opacity="0.18" stroke-width="4"/>
+      <circle cx="330" cy="62" r="6" fill="#06141D" stroke="#6FE0CD" stroke-opacity="0.6" stroke-width="1.5"/>
+      <circle cx="980" cy="90" r="7" fill="#06141D" stroke="#E8604F" stroke-opacity="0.65" stroke-width="1.6"/>
+      <circle cx="980" cy="90" r="12" fill="none" stroke="#E8604F" stroke-opacity="0.16" stroke-width="4"/>
+      <circle cx="1158" cy="40" r="6" fill="#06141D" stroke="#6FE0CD" stroke-opacity="0.6" stroke-width="1.5"/>
+    </g>
+  </svg>
+
+  <div class="inner">
+    <div class="chip-row">
+      <span class="cue-line"></span>
+      <span class="chip"><span class="dot"></span>DATA SCIENTIST · TS/SCI CLEARED</span>
+      <span class="cue-line"></span>
+    </div>
+    <h1>Rebekah Warner</h1>
+    <p class="line">Chinese linguist turned full-stack data scientist.</p>
+    <p class="tele">DEPTH <span class="coral-txt">−40 M</span> · AND DESCENDING</p>
+  </div>
+</body>
+</html>
