@@ -1948,6 +1948,12 @@ body { font-size: 1.125rem; }
     padding-bottom: 0.5rem;
   }
   .reef-floor { display: none; }
+  .reef {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 0.9rem;
+  }
   .coral-cluster {
     flex: none;
     display: block;
@@ -1955,6 +1961,14 @@ body { font-size: 1.125rem; }
     width: min(100%, 420px);
     height: 195px;
   }
+  /* The two big beds keep their own rows; the six slimmer formations
+     pair up side by side so the reef takes half the scrolling. */
+  .reef > .coral-cluster:nth-of-type(n+3) {
+    width: calc(50% - 0.45rem);
+    height: 172px;
+  }
+  .reef > .coral-cluster:nth-of-type(n+3) .node { width: 34px; height: 34px; }
+  .reef > .coral-cluster:nth-of-type(n+3) .cluster-label { font-size: 0.62rem; }
   .coral {
     display: block;
     position: absolute;
@@ -2026,4 +2040,26 @@ body { font-size: 1.125rem; }
 
   /* Contact email kept 4px of breathing room; give it real margins. */
   .contact-email a { font-size: clamp(1.1rem, 4.9vw, 1.6rem); }
+}
+
+/* Sticky section nav on phones: the link row stays pinned while the
+   wordmark scrolls away with the hero, so any section is one tap away
+   from anywhere on the dive. */
+@media (max-width: 620px) {
+  .site-header { padding-top: 3.4rem; }
+  .site-header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    justify-content: center;
+    padding: 0.7rem 0.6rem;
+    background: rgba(4, 14, 21, 0.82);
+    -webkit-backdrop-filter: blur(9px);
+    backdrop-filter: blur(9px);
+    border-bottom: 1px solid rgba(111, 224, 205, 0.14);
+  }
+  /* Anchor jumps land below the pinned bar, not underneath it */
+  html { scroll-padding-top: 3rem; }
 }
