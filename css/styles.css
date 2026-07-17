@@ -1976,7 +1976,12 @@ body { font-size: 1.125rem; }
     width: 37px;
     height: 37px;
   }
-  .coral { filter: brightness(1.45); }
+  /* Bold coral: the strokes are authored at 0.22-0.3 opacity for
+     desktop scale; on a phone that reads as ghost lines under the
+     icons. Opacity is the dial that matters (brightness leaves the
+     alpha untouched), so raise it outright. */
+  .coral g, .coral path { stroke-opacity: 0.62; }
+  .coral ellipse { fill-opacity: 0.26; }
   .cluster-label {
     position: absolute;
     left: 50%;
