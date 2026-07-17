@@ -1942,7 +1942,7 @@ body { font-size: 1.125rem; }
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    row-gap: 3.2rem;
+    row-gap: 3.8rem;
     column-gap: 0;
     margin-top: 2rem;
     padding-bottom: 0.5rem;
@@ -1952,8 +1952,8 @@ body { font-size: 1.125rem; }
     flex: none;
     display: block;
     position: relative;
-    width: min(100%, 400px);
-    height: 168px;
+    width: min(100%, 420px);
+    height: 195px;
   }
   .coral {
     display: block;
@@ -1965,16 +1965,18 @@ body { font-size: 1.125rem; }
     max-width: 100%;
   }
   .coral-wide { width: 100%; left: 0; transform: none; }
-  /* Nodes shrink a little; --ny values were tuned for 195px-tall
-     clusters, so scale their altitude down to match 168px. */
+  /* Full-height clusters keep the authored node altitudes; icons a
+     touch smaller so coral shows between them, and the coral itself
+     brightens to read behind the icons at this size. */
   .coral-cluster .node {
     position: absolute;
     left: var(--nx);
-    bottom: calc(var(--ny) * 0.82);
+    bottom: var(--ny);
     transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
+    width: 37px;
+    height: 37px;
   }
+  .coral { filter: brightness(1.45); }
   .cluster-label {
     position: absolute;
     left: 50%;
@@ -2012,18 +2014,6 @@ body { font-size: 1.125rem; }
   .site-header a { font-size: 0.69rem; letter-spacing: 0.06em; }
   .nav-num { display: none; }
   .site-header .head-pill { display: none; }
-
-  /* Hero chip: two balanced lines beside a centered dot, instead of
-     three ragged ones; the flanking dashes shrink to stubs at this
-     width, so they go too. */
-  .chip-row .cue-line { display: none; }
-  .hero-kicker {
-    font-size: 0.72rem;
-    letter-spacing: 0.13em;
-    padding: 0.7rem 1.25rem;
-    text-align: left;
-  }
-  .hero-kicker .kicker-txt { text-wrap: balance; }
 
   /* The hero held a full viewport of dark water below the buttons;
      shorter, so the first scene's kicker breathes at the fold. */
