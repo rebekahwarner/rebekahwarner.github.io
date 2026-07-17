@@ -42,6 +42,12 @@
   </header>
 
   <main>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="coral-wc" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="61" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="6"/></filter>
+        <path id="fish-shape" d="M2 16 Q20 3 40 13 Q51 5 59 4 Q54 12 54 16 Q54 20 59 28 Q51 27 40 19 Q20 29 2 16 Z"/>
+      </defs>
+    </svg>
     <!-- ======================== HERO · 0 m ======================== -->
     <section class="hero" aria-label="Introduction">
       <svg class="hero-wash" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
@@ -132,7 +138,7 @@
         <div class="reef-stage">
         <div class="reef">
           <svg class="reef-floor" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-            <defs><linearGradient id="floor-fade" x1="0" x2="1"><stop offset="0" stop-color="#6FE0CD" stop-opacity="0"/><stop offset="0.08" stop-color="#6FE0CD" stop-opacity="0.09"/><stop offset="0.92" stop-color="#6FE0CD" stop-opacity="0.09"/><stop offset="1" stop-color="#6FE0CD" stop-opacity="0"/></linearGradient><filter id="coral-wc" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="61" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="6"/></filter></defs>
+            <defs><linearGradient id="floor-fade" x1="0" x2="1"><stop offset="0" stop-color="#6FE0CD" stop-opacity="0"/><stop offset="0.08" stop-color="#6FE0CD" stop-opacity="0.09"/><stop offset="0.92" stop-color="#6FE0CD" stop-opacity="0.09"/><stop offset="1" stop-color="#6FE0CD" stop-opacity="0"/></linearGradient></defs>
             <path filter="url(#coral-wc)" d="M0 42 C80 34 160 46 260 40 C380 32 460 48 580 42 C700 36 780 50 900 42 C1020 34 1100 46 1200 40 L1200 60 L0 60 Z" fill="url(#floor-fade)"/>
           </svg>
           <div class="coral-cluster" role="group" aria-label="Coding languages" data-note="Python is where I live day to day. R for statistics, SQL everywhere it counts (PostgreSQL, MySQL, SQLite, Oracle), Swift for my iOS widgets, and enough HTML, CSS, and JavaScript to build this site by hand." style="--w:4.2">
@@ -281,7 +287,7 @@
       <!-- A small school passing through "the reef", same watercolor treatment as the hero wash -->
       <svg class="reef-fish" viewBox="0 0 420 340" aria-hidden="true" focusable="false">
         <defs>
-          <path id="fish-shape" d="M2 16 Q20 3 40 13 Q51 5 59 4 Q54 12 54 16 Q54 20 59 28 Q51 27 40 19 Q20 29 2 16 Z"/>
+          
           <filter id="fish-wc" x="-40%" y="-40%" width="180%" height="180%">
             <feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="2" seed="11" result="n"/>
             <feDisplacementMap in="SourceGraphic" in2="n" scale="9"/>
