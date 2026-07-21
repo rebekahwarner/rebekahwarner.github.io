@@ -58,17 +58,49 @@
     };
   }
 
+  /* The scannable band: the number first, then the one-line problem
+     statement. Meant to be read in under five seconds. */
+  function metricsBandHTML(p) {
+    const m = p.metric || {};
+    let html = `<div class="case-metrics">`;
+    if (m.value) {
+      html += `<p class="case-metric"><strong>${escapeHTML(m.value)}</strong><span>${escapeHTML(m.label || "")}</span></p>`;
+    }
+    if (p.oneLiner) html += `<p class="case-oneliner">${fmt(p.oneLiner)}</p>`;
+    return html + `</div>`;
+  }
+
+  /* Call to action. A repo that isn't published yet renders as an honest
+     note rather than a link that goes nowhere. */
+  function caseCTAHTML(p) {
+    const r = p.repo;
+    let html = "";
+    if (r && r.url && r.published) {
+      html += `<a class="cta-button cta-primary" href="${escapeHTML(r.url)}" target="_blank" rel="noopener noreferrer">View code on GitHub</a>`;
+    } else if (r && r.url) {
+      /* TODO: publish ${r.url}, then set published: true in js/site.js. */
+      html += `<span class="cta-button cta-pending">Code going up on GitHub shortly</span>`;
+    } else if (p.repoNote) {
+      html += `<p class="cta-note">${fmt(p.repoNote)}</p>`;
+    }
+    if (p.demo && p.demo.url) {
+      html += `<a class="cta-button cta-secondary" href="${escapeHTML(p.demo.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(p.demo.label || "Live demo")}</a>`;
+    }
+    return html ? `<div class="case-cta">${html}</div>` : "";
+  }
+
   /* Flat layout: standalone case-study pages and the editor preview. */
   function caseStudyBodyHTML(p, opts) {
     const { assetPrefix = "", headingTag = "h2" } = opts || {};
     const parts = buildParts(p, assetPrefix);
     const H = headingTag;
-    let html = "";
+    let html = metricsBandHTML(p);
     if (parts.problem) html += `<${H}>The problem</${H}>${parts.problem}`;
     if (parts.approach) html += `<${H}>My approach</${H}>${parts.approach}`;
     if (parts.tools) html += `<${H}>Tools</${H}>${parts.tools}`;
     if (parts.outcome) html += `<${H}>The outcome</${H}>${parts.outcome}`;
     html += parts.figure;
+    html += caseCTAHTML(p);
     return html;
   }
 
@@ -85,6 +117,7 @@
     if (parts.outcome)
       side += `<div class="cs-outcome">${label("The outcome")}${parts.outcome}</div>`;
     if (parts.tools) side += label("Tools") + parts.tools;
+    side += caseCTAHTML(p);
     side += `<p class="case-standalone"><a href="${pagePrefix}${escapeHTML(p.slug)}.html">Open as its own page</a></p>`;
     let html = `<div class="cs-grid"><div class="cs-main">${main}</div><aside class="cs-side">${side}</aside></div>`;
     if (parts.figure) html += `<div class="cs-figure">${parts.figure}</div>`;
@@ -120,6 +153,8 @@
   window.PortfolioRender = {
     escapeHTML,
     fmt,
+    metricsBandHTML,
+    caseCTAHTML,
     caseStudyBodyHTML,
     caseStudySplitHTML,
     projectCardHTML,

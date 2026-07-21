@@ -30,6 +30,9 @@ const PROJECTS = [
     metric: { value: "15 min", label: "env setup, down from 3 days" },
     tags: ["SQL", "Python", "JSON", "Excel"],
     wash: "wash-teal",
+    // Guidehouse client work: the code stays with the client, on purpose.
+    repo: null,
+    repoNote: "Client work, so the code stays with Guidehouse. The design is the shareable part.",
     caseStudy: {
       problem: [
         "Government analytics programs live and die by their databases, and schemas do not sit still: upstream changes land without warning and break analyses downstream, usually discovered only after something fails. Onboarding had the same manual-work problem: standing up one analyst's environment took about three days by hand.",
@@ -57,6 +60,8 @@ const PROJECTS = [
     metric: { value: "11", label: "widget styles, one API" },
     tags: ["Swift", "SwiftUI", "WidgetKit", "REST API"],
     wash: "wash-sand",
+    // TODO: publish this repo, then flip published to true and rerun `node build.js`.
+    repo: { url: "https://github.com/rebekahwarner/joshua-project-widget", published: false },
     caseStudy: {
       problem: [
         "Joshua Project publishes a daily unreached people group with photos, maps, and prayer points, but there was no iOS home-screen widget for it, and I knew I'd never open an app for it every morning. A widget would meet me where I already look. So: build the thing I wished existed, on their public API.",
@@ -91,6 +96,8 @@ const PROJECTS = [
     metric: { value: "87%", label: "validation accuracy" },
     tags: ["Python", "scikit-learn", "NLTK"],
     wash: "wash-teal",
+    // TODO: publish this repo, then flip published to true and rerun `node build.js`.
+    repo: { url: "https://github.com/rebekahwarner/nlp-sentiment-classifier", published: false },
     caseStudy: {
       problem: [
         "Given 10,000 labeled documents, build a classifier that can tell positive sentiment from negative, and then actually use it, generating predictions for a 5,000-document test set with no labels. End to end: raw text in, defensible predictions out.",
@@ -120,6 +127,8 @@ const PROJECTS = [
     metric: { value: "8", label: "datasets, one clean picture" },
     tags: ["Python", "pandas", "seaborn"],
     wash: "wash-sand",
+    // TODO: publish this repo, then flip published to true and rerun `node build.js`.
+    repo: { url: "https://github.com/rebekahwarner/linkedin-job-market", published: false },
     caseStudy: {
       problem: [
         "LinkedIn job data doesn't arrive as one tidy table. It arrived as eight separate datasets (postings, companies, salaries, skills, and more) with the postings file alone over 60 MB. Salaries were reported hourly, monthly, or yearly depending on the row, and missing values were everywhere. The goal: merge it all into something trustworthy and explore what the U.S. IT & Services job market actually looks like.",
