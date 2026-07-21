@@ -7,12 +7,19 @@
   const R = window.PortfolioRender;
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- Social links (hidden until filled in site.js) ---------- */
+  /* ---------- Social links ----------
+     The real URLs are hard-coded in the HTML so crawlers, link-preview
+     bots, and ATS parsers see them without running any JavaScript. This
+     only keeps them in sync with site.js, and hides a link that has no
+     destination in either place. */
   document.querySelectorAll("[data-social]").forEach((a) => {
     const url = SITE[a.dataset.social];
+    const hasRealHref = a.getAttribute("href") && a.getAttribute("href") !== "#";
     if (url) {
+      /* Resume is a repo-relative path; respect the page's own prefix. */
+      if (!/^\w+:|^\/\//.test(url) && hasRealHref) return;
       a.href = url;
-    } else {
+    } else if (!hasRealHref) {
       const li = a.closest("li");
       (li || a).hidden = true;
     }

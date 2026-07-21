@@ -231,7 +231,7 @@
 
   <footer class="case-footer">
     <div class="section-inner">
-      <p><a href="../index.html">&larr; Rebekah Warner</a> &middot; <a href="mailto:rebekahrwarner@protonmail.com">rebekahrwarner@protonmail.com</a> &middot; <a data-social="github" href="#" rel="me">GitHub</a> <a data-social="linkedin" href="#" rel="me">LinkedIn</a></p>
+      <p><a href="../index.html">&larr; Rebekah Warner</a> &middot; <a href="mailto:rebekahrwarner@protonmail.com">rebekahrwarner@protonmail.com</a> &middot; <a data-social="github" href="${SITE.github}" rel="me noopener noreferrer" target="_blank">GitHub</a> <a data-social="linkedin" href="${SITE.linkedin}" rel="me noopener noreferrer" target="_blank">LinkedIn</a> &middot; <a data-social="resume" href="../${SITE.resume}" target="_blank" rel="noopener noreferrer">Resume</a></p>
     </div>
   </footer>
 
