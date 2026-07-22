@@ -12,6 +12,11 @@
    - PROJECTS: add an object (copy the shape below) and create
      projects/<slug>.html from projects/_template.html.
    - Text fields support **bold** and `code` marks.
+
+   IMPORTANT: the HTML files carry a static copy of everything below,
+   so crawlers and ATS parsers can read it without running JavaScript.
+   After editing this file, run:  node build.js
+   That regenerates the marked blocks in index.html and projects/*.html.
    ============================================================ */
 
 const SITE = {

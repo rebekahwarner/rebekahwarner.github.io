@@ -225,7 +225,8 @@
 
   <main class="case-body" data-case="${R.escapeHTML(p.slug)}">
     <div class="section-inner">
-      <noscript><p>This case study needs JavaScript to render. Email me for details: rebekahrwarner@protonmail.com.</p></noscript>
+      <!-- BUILD:case-study:start -->
+      <!-- BUILD:case-study:end -->
     </div>
   </main>
 

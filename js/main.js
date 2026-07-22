@@ -28,10 +28,14 @@
   /* ---------- Project cards: render + expand in place ---------- */
   const grid = document.getElementById("project-grid");
   if (grid) {
-    grid.insertAdjacentHTML(
-      "afterbegin",
-      PROJECTS.map((p) => R.projectCardHTML(p)).join("")
-    );
+    /* build.js normally bakes the cards into index.html. Only render them
+       here if that hasn't happened, so we never end up with two sets. */
+    if (!grid.querySelector(".project-card")) {
+      grid.insertAdjacentHTML(
+        "afterbegin",
+        PROJECTS.map((p) => R.projectCardHTML(p)).join("")
+      );
+    }
 
     grid.addEventListener("click", (e) => {
       if (e.target.closest("a") || e.target.closest(".card-case")) return;
@@ -55,12 +59,16 @@
   if (caseMount) {
     const p = PROJECTS.find((x) => x.slug === caseMount.dataset.case);
     const inner = caseMount.querySelector(".section-inner") || caseMount;
-    if (p) {
+    /* Same rule as the grid: the page ships with the case study already in
+       it. Re-rendering would only risk overwriting good static HTML with a
+       stale copy, so leave it alone once it's there. */
+    const alreadyBuilt = !!inner.querySelector(".case-metrics, h2");
+    if (p && !alreadyBuilt) {
       inner.innerHTML = R.caseStudyBodyHTML(p, {
         assetPrefix: "../",
         headingTag: "h2",
       });
-    } else {
+    } else if (!p && !alreadyBuilt) {
       inner.innerHTML =
         "<p>This case study isn't in <code>js/site.js</code> yet. Add the project there (or via <code>editor.html</code>) using the same slug as this file's name.</p>";
     }
