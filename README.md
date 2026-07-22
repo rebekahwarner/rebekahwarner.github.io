@@ -51,7 +51,7 @@ All project content lives in `js/site.js`. The HTML files carry a static copy of
 node build.js
 ```
 
-If you skip it, the site still looks right in your browser (`js/main.js` renders client-side when the baked markup is missing), but the static HTML keeps the old text and the machine readers get the stale version. To check at a glance:
+If you skip it, your edit does not appear anywhere: the pages keep serving the previous text, to you as well as to crawlers. `js/main.js` renders from `js/site.js` only when the baked markup is missing entirely, so it cannot rescue content that is merely out of date. To check at a glance:
 
 ```sh
 grep -c 'class="project-card"' index.html   # expect 4, not 0
@@ -92,6 +92,8 @@ build.js                    bakes site.js into the HTML; run after every site.js
 js/render.js                shared card/case-study rendering
 js/main.js                  site behavior: expansion, gauge, counters, skills notes
 js/water.js                 hero canvas animation (rays + bubbles)
+js/snow.js                  marine-snow canvas; drifts with scroll, whole page
+js/scenes.js                reveals each full-screen scene as you reach it
 js/editor.js                editor logic (localStorage drafts, downloads)
 css/styles.css              all styling; palette variables at the top
 assets/                     og-image.png and chart/screenshot images
