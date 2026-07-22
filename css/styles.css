@@ -233,11 +233,6 @@ a:hover { text-decoration-color: var(--coral); text-decoration-thickness: 2px; }
   padding: 0.5rem 1.4rem;
   transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
 }
-.hero-links a[href^="mailto"] {
-  background: var(--harbor);
-  border-color: var(--harbor);
-  color: var(--paper);
-}
 .hero-links a:hover {
   background: #0F484D;
   border-color: #0F484D;
@@ -1266,7 +1261,6 @@ a { color: var(--glow); }
   letter-spacing: 0.1em;
   font-size: 0.85rem;
 }
-.hero-links a[href^="mailto"] { background: rgba(111, 224, 205, 0.1); border-color: var(--glow-soft); color: var(--glow); }
 .hero-links a:hover { background: rgba(111, 224, 205, 0.16); border-color: var(--glow); color: var(--text-hi); }
 .dive-cue { left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 1rem; color: var(--glow-soft); }
 .dive-cue:hover { color: var(--coral); }
